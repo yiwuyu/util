@@ -1,7 +1,7 @@
 const getFileSize = (value = 0) => {
   const recursion = (size, index) => {
     const temp = size / 1024
-    if (temp < 0.1) {
+    if (size < 1000) {
       return {size, index}
     } else {
       return recursion(temp, index + 1)
